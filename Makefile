@@ -1,8 +1,11 @@
-build:
-	docker-compose up -d --build
-
 create-volume:
     docker volume create --name=static && docker volume create --name=media
+
+create-network:
+    docker network create nginx-proxy
+
+build:
+	docker-compose up -d --build
 	
 up:
 	docker-compose up -d
