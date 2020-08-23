@@ -46,7 +46,7 @@ The default configuration is not using Alpine. However, if you want to use Alpin
 
 ## How to use
 We use Makefile to make our life easy. You can see the command list on [Makefile](https://github.com/rririanto/docker-compose-django/blob/master/Makefile) file. 
-However, this is the first things to do to run this project: 
+However, the first things to do to run this project is by: 
 
 1. Create nginx-proxy network
 ```sh
