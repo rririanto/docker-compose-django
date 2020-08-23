@@ -1,0 +1,59 @@
+version: "3"
+services:
+  db:
+    image: "mysql:5.7"
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: db
+    restart: unless-stopped
+    tty: true
+    env_file:
+      - ./.envs/.db
+    ports:
+      - 3306:3306
+    expose:
+      - "3306"
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: example
+    restart: unless-stopped
+    volumes:
+      - ./example:/opt/django/example
+      - static:/opt/django/example/static
+      - media:/opt/django/example/media
+    expose:
+      - 8000
+    env_file:
+      - ./.envs/.django
+    depends_on:
+      - db
+    
+    environment:
+      SERVICE_NAME: example
+      SERVICE_TAGS: web
+      VIRTUAL_HOST: localhost
+      VIRTUAL_PORT: 80
+      #enable this if you want to have ssl
+      #LETSENCRYPT_HOST: yourdomain.com
+      #LETSENCRYPT_EMAIL: youremail@yourdomain.com
+
+  #Enable this if you want to config your db with easy UI
+  #adminer:
+  #  image: adminer
+  #  restart: always
+  #  ports:
+  #    - 8080:8080
+  #'''x
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
+
+volumes:
+  static:
+    external: true
+  media:
+    external: true

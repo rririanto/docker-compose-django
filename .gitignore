@@ -1,0 +1,9 @@
+# misc
+.DS_Store
+.dockerenv
+nginx-proxy/certs
+nginx-proxy/html
+nginx-proxy/vhost.d
+nginx-proxy/conf.d
+example/example/__pycache__/*
+
