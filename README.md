@@ -8,7 +8,7 @@ This is a Docker setup for a web application based on Django.
 - Python dependencies are managed through pip requirement.txt
 
 ## Motivation
-I've using docker almost in all of my Django projects. There's a lot starter or example to use docker to run the Django web framework available on Github. However, I have my own settings that make my job more flexible and easier, and I would love to share it. So anyboday can get inspired. 
+I've been using docker in most of my Django projects. There's a lot starter or example to use docker to run the Django web framework available on Github. However, I have my own settings that make my job more flexible and easier, and I would love to share it. So everyone can get inspired. 
 
 ## Prerequisite
 - [Docker & Docker-compose](https://runnable.com/docker/install-docker-on-windows-10)
