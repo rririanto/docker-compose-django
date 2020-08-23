@@ -6,9 +6,10 @@ This is a Docker setup for a web application based on Django.
 - SSL/HTTPS automatic generate and renew using [letsencrypt-nginx-proxy-companion](https://hub.docker.com/r/jrcs/letsencrypt-nginx-proxy-companion/)
 - Static and media files are persistently stored in volumes.
 - Python dependencies are managed through pip requirement.txt
+- Use [Django version LTS 2.2](https://www.djangoproject.com/download/)
 
 ## Motivation
-I've been using docker in most of my Django projects. There's a lot starter or example to use docker to run the Django web framework available on Github. However, to have the proper configuration that fits my project requirement is a little tricky. So the way I found my own configuration is by observing at other configurations and read the documentation from an official docker site. So I hope someone could get inspired too!
+I've been using docker in most of my Django projects. There's a lot starter or example to use docker to run the Django web framework available on Github. However, to have the proper configuration that fits my project requirement is a little tricky. So the way I created my own configuration is by observing at other configurations and read the documentation from an official docker site. So I hope someone could get inspired!
 
 ## Prerequisite
 - [Docker & Docker-compose](https://runnable.com/docker/install-docker-on-windows-10)
