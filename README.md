@@ -69,6 +69,7 @@ make build
 
 ## Thank you
 This project was inspired from:
+- [nginx-proxy](https://github.com/nginx-proxy/nginx-proxy)
 - [pawamoy](https://github.com/pawamoy/docker-nginx-postgres-django-example)
 - [testdriven](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/)
 
