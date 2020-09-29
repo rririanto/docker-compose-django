@@ -1,5 +1,5 @@
 create-volume:
-    docker volume create --name=static && docker volume create --name=media
+	docker volume create --name=static && docker volume create --name=media
 
 create-network:
 	docker network create nginx-proxy
