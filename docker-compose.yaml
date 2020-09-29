@@ -24,7 +24,7 @@ services:
       - static:/opt/django/example/static
       - media:/opt/django/example/media
     expose:
-      - 8000
+      - 80
     env_file:
       - ./.envs/.django
     depends_on:
