@@ -24,4 +24,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 ADD example/ /opt/django/example/
 
 # CMD will run when this dockerfile is running
-CMD ["sh", "-c", "python manage.py collectstatic --no-input; python manage.py migrate; gunicorn example.wsgi -b 0.0.0.0:8000"]
+CMD ["sh", "-c", "python manage.py collectstatic --no-input; python manage.py migrate; gunicorn example.wsgi -b 0.0.0.0:80"]
