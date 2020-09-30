@@ -62,7 +62,10 @@ collectstatic:
 	docker exec example /bin/sh -c "python manage.py collectstatic --noinput"  
 
 migrate:
-	docker exec example /bin/sh -c "python manage.py migrate"  
+	docker exec example /bin/sh -c "python manage.py makemigrations && python manage.py migrate"
 
 createsuperuser:
 	docker-compose run web python manage.py createsuperuser
+
+rebuild:
+	sh rebuild_web.sh
