@@ -49,6 +49,11 @@ The default configuration is not using Alpine. However, if you want to use Alpin
 
 Make sure to replace "example" with your project directory name in [nginx.tmpl](https://github.com/rririanto/docker-compose-django/blob/master/nginx-proxy/nginx.tmpl), [Nginx docker-compose](https://github.com/rririanto/docker-compose-django/blob/master/nginx-proxy/docker-compose.yaml), [docker-compose web & mysql](https://github.com/rririanto/docker-compose-django/blob/master/docker-compose.yaml) and also [DockerFile](https://github.com/rririanto/docker-compose-django/blob/master/Dockerfile) or [DockerAlpine](https://github.com/rririanto/docker-compose-django/blob/master/Dockerfile-alpine)
 
+5. Database and django .env
+
+If you would like to change the database and django env settings please see [.env](https://github.com/rririanto/docker-compose-django/tree/master/.envs)
+
+
 ## How to use
 We use Makefile to make our life easy. You can see the command list on [Makefile](https://github.com/rririanto/docker-compose-django/blob/master/Makefile) file. 
 However, the first things to do to run this project is by: 
