@@ -35,7 +35,8 @@ services:
       SERVICE_TAGS: web
       VIRTUAL_HOST: localhost
       VIRTUAL_PORT: 80
-      #enable this if you want to have ssl
+      # Enable this if you want to have https/ssl support. 
+      # Don't enable this if you use cloudflare  
       #LETSENCRYPT_HOST: yourdomain.com
       #LETSENCRYPT_EMAIL: youremail@yourdomain.com
 
