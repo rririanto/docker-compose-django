@@ -87,6 +87,12 @@ make collectstatic
 make createsuperuser
 ```
 
+## Tips
+You can update your code on container by using this command 
+```
+make rebuild.sh
+```
+
 ## Issues
 ***1. Static file or media not found***
 
