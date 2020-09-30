@@ -22,12 +22,13 @@ This project has a default host localhost, if you like to deploy it to your serv
 VIRTUAL_HOST: yourdomain.com
 VIRTUAL_PORT: 80
 LETSENCRYPT_HOST: yourdomain.com
-#Email use to register yourdomain.com to Letsencrypt
+# Email use to register yourdomain.com to Letsencrypt
 LETSENCRYPT_EMAIL: youremail@gmail.com
 ```
 Note: 
 - Once you enable LETSENCRYPT_HOST & LETSENCRYPT_EMAIL the nginx-proxy will be automaticly generate https cert for you. simple right?
 - Ignore this settings if you just want to run it in your localhost
+- Ignore this if you want to use Cloudflare because Cloudflare already has its own https generated; otherwise, you will get redirect looping. 
 
 2. [Dock-gen](https://github.com/jwilder/docker-gen) for nginx configuration
 
