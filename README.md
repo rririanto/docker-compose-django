@@ -70,6 +70,7 @@ make build
 
 ## Issues
 ***1. Static file or media not found***
+
 Please make sure you have correct directory path files of static and media in your settings. Also check on [nginx.tmpl](https://github.com/rririanto/docker-compose-django/blob/master/nginx-proxy/nginx.tmpl#L384) 
  
 ## Thank you
