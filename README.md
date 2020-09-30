@@ -57,7 +57,6 @@ However, the first things to do to run this project is by:
 ```sh
 make create-network
 ```
-
 2. Create volumes to store files persistently.
 ```sh
 make create-volume
@@ -69,6 +68,18 @@ make up-nginx
 4. Build the Django web
 ```
 make build
+```
+5. Migrate
+```
+make migrate
+```
+6. Collectstatic files
+```
+make collectstatic
+```
+7. Create Super User
+```
+make createsuperuser
 ```
 
 ## Issues
