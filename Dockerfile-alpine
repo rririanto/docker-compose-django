@@ -38,4 +38,4 @@ RUN apk del build-deps && \
     rm -rf ~/.cache/pip
 
 # CMD will run when this dockerfile is running
-CMD ["sh", "-c", "python manage.py collectstatic --no-input; python manage.py migrate; gunicorn -b :80 --workers=3 example.wsgi:application"]
+CMD ["sh", "-c", "gunicorn -b :80 --workers=3 example.wsgi:application"]
