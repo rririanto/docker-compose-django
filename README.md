@@ -12,7 +12,7 @@ This is a Docker setup for a web application based on Django.
 I've been using docker in most of my Django projects. There's a lot starter or example to use docker to run the Django web framework available on Github. However, to have the proper configuration that fits my project requirement is a little tricky. So the way I created my own configuration is by observing at other configurations and read the documentation from an official docker site. So I hope someone could get inspired!
 
 ## Prerequisite
-- [Docker & Docker-compose](https://runnable.com/docker/install-docker-on-windows-10)
+- Docker & Docker-compose: [Linux](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04) or [Windows](https://runnable.com/docker/install-docker-on-windows-10)
 
 ## Configurations
 This project has a default host localhost, if you like to deploy it to your server you need to update this configuration:
@@ -68,6 +68,10 @@ make up-nginx
 make build
 ```
 
+## Issues
+***1. Static file or media not found***
+Please make sure you have correct directory path files of static and media in your settings. Also check on [nginx.tmpl](https://github.com/rririanto/docker-compose-django/blob/master/nginx-proxy/nginx.tmpl#L384) 
+ 
 ## Thank you
 This project was inspired from:
 - [nginx-proxy](https://github.com/nginx-proxy/nginx-proxy)
