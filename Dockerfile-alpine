@@ -5,10 +5,10 @@ FROM python:3.7-alpine
 ENV PYTHONUNBUFFERED 1
 ENV C_FORCE_ROOT true
 
-RUN mkdir -p /opt/django/example
+RUN mkdir -p /opt/django/dev
 
 # Creating Work Directory
-WORKDIR /opt/django/example
+WORKDIR /opt/django/dev
 
 # Adding mandatory packages to docker
 RUN apk update && apk add --no-cache \
@@ -28,9 +28,9 @@ RUN apk add --no-cache --virtual build-deps \
 RUN pip install --upgrade pip
 
 # Installing requirements.pip from project
-ADD example/requirements.txt /opt/django/example/
-RUN pip install --no-cache-dir -r requirements.txt
-ADD example/ /opt/django/example/
+ADD dev/requirements/production.txt /opt/django/dev/
+RUN pip install --no-cache-dir -r production.txt
+ADD dev/ /opt/django/dev/
 
 # removing temporary packages from docker and removing cache 
 RUN apk del build-deps && \
@@ -38,4 +38,4 @@ RUN apk del build-deps && \
     rm -rf ~/.cache/pip
 
 # CMD will run when this dockerfile is running
-CMD ["sh", "-c", "gunicorn -b :80 --workers=3 example.wsgi:application"]
+CMD ["sh", "-c", "gunicorn -b :80 --workers=3 config.wsgi:application"]

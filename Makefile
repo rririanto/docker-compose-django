@@ -44,7 +44,7 @@ shell-nginx:
 	docker exec -ti nginx /bin/sh
 
 shell-web:
-	docker exec -ti example /bin/sh
+	docker exec -ti dev /bin/sh
 
 shell-db:
 	docker exec -ti db /bin/sh
@@ -59,10 +59,10 @@ log-db:
 	docker-compose logs db
 
 collectstatic:
-	docker exec example /bin/sh -c "python manage.py collectstatic --noinput"  
+	docker exec dev /bin/sh -c "python manage.py collectstatic --noinput"  
 
 migrate:
-	docker exec example /bin/sh -c "python manage.py makemigrations && python manage.py migrate"
+	docker exec dev /bin/sh -c "python manage.py makemigrations && python manage.py migrate"
 
 createsuperuser:
 	docker-compose run web python manage.py createsuperuser

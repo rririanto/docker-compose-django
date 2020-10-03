@@ -14,8 +14,8 @@ services:
       - ./vhost.d:/etc/nginx/vhost.d
       - ./html:/usr/share/nginx/html
       - ./certs:/etc/nginx/certs:ro
-      - static:/opt/django/example/static
-      - media:/opt/django/example/media
+      - static:/opt/django/dev/apps/static
+      - media:/opt/django/dev/apps/media
 
   nginx-gen:
     image: jwilder/docker-gen

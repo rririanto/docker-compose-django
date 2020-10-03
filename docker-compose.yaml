@@ -17,12 +17,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: example
+    container_name: dev
     restart: unless-stopped
     volumes:
-      - ./example:/opt/django/example
-      - static:/opt/django/example/static
-      - media:/opt/django/example/media
+      - ./dev:/opt/django/dev
+      - static:/opt/django/dev/apps/static
+      - media:/opt/django/dev/apps/media
     expose:
       - 80
     env_file:
@@ -31,14 +31,14 @@ services:
       - db
     
     environment:
-      SERVICE_NAME: example
+      SERVICE_NAME: dev
       SERVICE_TAGS: web
       VIRTUAL_HOST: localhost
       VIRTUAL_PORT: 80
       # Enable this if you want to have https/ssl support. 
       # Don't enable this if you use cloudflare  
-      #LETSENCRYPT_HOST: yourdomain.com
-      #LETSENCRYPT_EMAIL: youremail@yourdomain.com
+      # LETSENCRYPT_HOST: yourdomain.com
+      # LETSENCRYPT_EMAIL: youremail@yourdomain.com
 
   #Enable this if you want to config your db with easy UI
   #adminer:
